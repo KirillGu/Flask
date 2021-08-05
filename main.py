@@ -7,7 +7,7 @@ api = Api(app)
 announcement_put_args = reqparse.RequestParser()
 announcement_put_args.add_argument('heading', type=str, help='Заголовок Статьи', required=True)
 announcement_put_args.add_argument('description', type=str, help='Описание', required=True)
-announcement_put_args.add_argument('date of creation', type=int, help='Дата создания', required=True)
+announcement_put_args.add_argument('date of creation', type=str, help='Дата создания', required=True)
 announcement_put_args.add_argument('owner', type=str, help='Владелец', required=True)
 
 announcements = {}

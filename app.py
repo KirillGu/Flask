@@ -1,8 +1,12 @@
 import requests, json
+from datetime import date
+
+today = date.today()
+
 
 BASE = 'http://127.0.0.1:5000/'
 
-response = requests.put(BASE + 'announcements/1', {'heading': 'tata', 'description': 'ratatu', 'date of creation': 10000, 'owner': 'tim'})
+response = requests.put(BASE + 'announcements/1', {'heading': 'tata', 'description': 'ratatu', 'date of creation': today, 'owner': 'tim'})
 
 print(response.json())
 
